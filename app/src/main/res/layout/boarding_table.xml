@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/tableHeaderImage"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:background="@color/colorPrimaryLight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/tableImage"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="@+id/tableHeaderImage"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tableHeaderImage"
+        app:layout_constraintTop_toBottomOf="@+id/tableHeaderImage" />
+
+    <TextView
+        android:id="@+id/textViewTerminalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/terminal_label"
+        app:layout_constraintStart_toStartOf="@+id/tableHeaderImage"
+        app:layout_constraintTop_toTopOf="@+id/tableHeaderImage" />
+
+    <TextView
+        android:id="@+id/textViewGateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="@string/gate_label"
+        app:layout_constraintEnd_toEndOf="@+id/tableHeaderImage"
+        app:layout_constraintTop_toTopOf="@+id/tableHeaderImage" />
+
+    <TextView
+        android:id="@+id/textViewSeatLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/seat_label"
+        app:layout_constraintEnd_toEndOf="@+id/tableHeaderImage"
+        app:layout_constraintStart_toStartOf="@+id/tableHeaderImage"
+        app:layout_constraintTop_toTopOf="@+id/tableHeaderImage" />
+
+    <TextView
+        android:id="@+id/textViewTerminal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTerminalLabel"
+        app:layout_constraintStart_toStartOf="@+id/textViewTerminalLabel"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTerminalLabel"
+        tools:text="@string/terminal" />
+
+    <TextView
+        android:id="@+id/textViewGate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@+id/textViewGateLabel"
+        app:layout_constraintStart_toStartOf="@+id/textViewGateLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tableHeaderImage"
+        tools:text="@string/gate" />
+
+    <TextView
+        android:id="@+id/textViewSeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@+id/textViewSeatLabel"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="@+id/textViewSeatLabel"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSeatLabel"
+        tools:text="@string/seat" />
+</android.support.constraint.ConstraintLayout>
+</layout>

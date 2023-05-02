@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+ >
+
+    <TextView
+        android:id="@+id/passenger_lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:letterSpacing="0.5"
+        android:text="@string/passenger_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+
+        />
+    <TextView
+        android:id="@+id/passenger_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintStart_toStartOf="@+id/passenger_lable"
+        app:layout_constraintTop_toBottomOf="@+id/passenger_lable"
+        tools:text="@string/passenger_name"
+        android:textColor="@color/colorPrimary"/>
+
+    <ImageView
+        android:id="@+id/left_rectangle"
+        android:layout_width="60dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passenger_name"
+        app:srcCompat="@drawable/shape_rectangle_stroke" />
+
+    <ImageView
+        android:id="@+id/right_rectangle"
+        android:layout_width="60dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passenger_name"
+        app:srcCompat="@drawable/shape_rectangle_stroke" />
+
+    <ImageView
+        android:id="@+id/devider"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/right_rectangle"
+        app:layout_constraintEnd_toStartOf="@+id/right_rectangle"
+        app:layout_constraintStart_toEndOf="@+id/left_rectangle"
+        app:layout_constraintTop_toTopOf="@+id/left_rectangle"
+        app:srcCompat="@drawable/shape_rectangle_stroke" />
+
+    <TextView
+        android:id="@+id/origin_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        tools:text="@string/origin_code"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+
+        app:layout_constraintBottom_toBottomOf="@+id/devider"
+        app:layout_constraintEnd_toEndOf="@+id/left_rectangle"
+        app:layout_constraintStart_toStartOf="@+id/left_rectangle"
+        app:layout_constraintTop_toTopOf="@+id/devider" />
+
+    <TextView
+        android:id="@+id/destination_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+
+        tools:text="@string/destination_code"
+        app:layout_constraintBottom_toBottomOf="@+id/devider"
+        app:layout_constraintEnd_toEndOf="@+id/right_rectangle"
+        app:layout_constraintStart_toStartOf="@+id/right_rectangle"
+        app:layout_constraintTop_toTopOf="@+id/devider" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/ic_art_plane"
+        app:layout_constraintBottom_toTopOf="@+id/devider"
+        app:layout_constraintEnd_toStartOf="@+id/right_rectangle"
+        app:layout_constraintStart_toEndOf="@+id/left_rectangle"
+        />
+
+    <TextView
+        android:id="@+id/flight_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/colorPrimaryLight"
+        app:layout_constraintEnd_toStartOf="@+id/right_rectangle"
+        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintStart_toEndOf="@+id/left_rectangle"
+        app:layout_constraintTop_toBottomOf="@+id/devider"
+        tools:text="@string/flight_code" />
+
+    <TextView
+        android:id="@+id/boarding_time_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:letterSpacing="0.3"
+        android:text="@string/boarding_time_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/left_rectangle" />
+
+    <TextView
+        android:id="@+id/boarding_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/boarding_time_label"
+        app:layout_constraintTop_toBottomOf="@+id/boarding_time_label"
+        tools:text="@string/boarding_time" />
+
+
+
+    <TextView
+        android:id="@+id/bording_in_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:letterSpacing="0.3"
+        android:text="@string/boarding_in_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/right_rectangle"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/boarding_in_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/bording_in_label"
+        app:layout_constraintTop_toBottomOf="@+id/bording_in_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/colorBad"
+        tools:text="@string/boarding_in_time" />
+
+
+
+
+</android.support.constraint.ConstraintLayout>
+
+</layout>
