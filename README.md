@@ -6,12 +6,15 @@ the starter code is encluded from  a Udacity course in the Android Basics Nanode
 Tools
 ---------
 android material Desgin
+
 constraint layout
+
 Data Binding 
 
 Screenshots
 -----------
 ![Screenshot1](travel-pass/Screenshot_1.png) 
+
 ![Screenshot1](travel-pass/Screenshot_2.png) 
 
 ![Screenshot1](travel-pass/Screenshot_3.png) 
